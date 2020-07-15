@@ -1,6 +1,6 @@
 import 'package:NumberTrivia/FEATURES/Domain/Entities/Number_Trivia.dart';
 import 'package:NumberTrivia/FEATURES/Domain/Repositories/Number_Trivia_repositories.dart';
-import 'package:NumberTrivia/FEATURES/Domain/UseCases/get_concrete_number_trivia.dart';
+import 'package:NumberTrivia/FEATURES/Domain/UseCases/getconcretenumbertrivia.dart';
 import 'package:dartz/dartz.dart';
 import 'package:mockito/mockito.dart';
 import 'package:flutter_test/flutter_test.dart';
