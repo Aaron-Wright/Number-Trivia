@@ -1,12 +1,11 @@
-import 'package:NumberTrivia/CORE/Errors/Failures.dart';
-import 'package:NumberTrivia/CORE/UseCases/usecase.dart';
-import 'package:NumberTrivia/FEATURES/Domain/Entities/Number_Trivia.dart';
 import 'package:dartz/dartz.dart';
 import 'package:equatable/equatable.dart';
 import 'package:flutter/material.dart';
 import 'package:meta/meta.dart';
-//import 'package:flutter/cupertino.dart';
 
+import '../../../CORE/Errors/Failures.dart';
+import '../../../CORE/UseCases/usecase.dart';
+import '../Entities/Number_Trivia.dart';
 import '../Repositories/Number_Trivia_repositories.dart';
 
 class GetConcreteNumberTrivia implements UseCase<NumberTrivia, int> {
