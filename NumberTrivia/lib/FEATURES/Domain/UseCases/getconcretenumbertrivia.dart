@@ -13,11 +13,10 @@ class GetConcreteNumberTrivia implements UseCase<NumberTrivia, int> {
 
   GetConcreteNumberTrivia(this.repository);
 
-  //execute({int number}) async {}
-  //@override
+  @override
   Future<Either<Failure, NumberTrivia>> call(Params params) async {
     return await repository.getConcreteNumberTrivia(params.number);
-  }
+  } //why is this call method a wrong one?
 }
 
 class Params extends Equatable {
