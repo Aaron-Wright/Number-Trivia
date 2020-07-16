@@ -18,7 +18,7 @@ class GetConcreteNumberTrivia implements UseCase<NumberTrivia, int> {
   Future<Either<Failure, NumberTrivia>> call(Params params) async {
     return await repository.getConcreteNumberTrivia(params.number);
   }
-}
+}// the call(Params params) method over here still has some wavy lines
 
 class Params extends Equatable {
   final int number;
