@@ -1,6 +1,5 @@
 import 'package:dartz/dartz.dart';
 import 'package:equatable/equatable.dart';
-import 'package:flutter/material.dart';
 import 'package:meta/meta.dart';
 
 import '../../../CORE/Errors/Failures.dart';
@@ -14,8 +13,10 @@ class GetConcreteNumberTrivia implements UseCase<NumberTrivia, int> {
   GetConcreteNumberTrivia(this.repository);
 
   @override
-  Future<Either<Failure, NumberTrivia>> call(Params params) async {
-    return await repository.getConcreteNumberTrivia(params.number);
+  Future<Either<Failure, NumberTrivia>> call(
+    int number,
+  ) async {
+    return await repository.getConcreteNumberTrivia(number);
   } //why is this call method a wrong one?
 }
 
