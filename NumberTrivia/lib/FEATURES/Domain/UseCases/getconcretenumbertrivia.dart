@@ -14,7 +14,7 @@ class GetConcreteNumberTrivia implements UseCase<NumberTrivia, int> {
 
   @override
   Future<Either<Failure, NumberTrivia>> call(
-    int number,
+    @required int number,
   ) async {
     return await repository.getConcreteNumberTrivia(number);
   } //why is this call method a wrong one?
