@@ -1,9 +1,10 @@
-import 'package:NumberTrivia/CORE/Errors/Failures.dart';
-import 'package:NumberTrivia/CORE/UseCases/usecase.dart';
-import 'package:NumberTrivia/FEATURES/Domain/Entities/Number_Trivia.dart';
-import 'package:NumberTrivia/FEATURES/Domain/Repositories/Number_Trivia_repositories.dart';
 import 'package:dartz/dartz.dart';
 import 'package:equatable/equatable.dart';
+
+import '../../../CORE/Errors/Failures.dart';
+import '../../../CORE/UseCases/usecase.dart';
+import '../Entities/Number_Trivia.dart';
+import '../Repositories/Number_Trivia_repositories.dart';
 
 class GetRandomNumberTrivia implements UseCase<NumberTrivia, NoParams> {
   final NumberTriviaRepository repository;
