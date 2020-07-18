@@ -1,3 +1,4 @@
+import 'package:NumberTrivia/CORE/UseCases/usecase.dart';
 import 'package:NumberTrivia/FEATURES/Domain/Entities/Number_Trivia.dart';
 import 'package:NumberTrivia/FEATURES/Domain/Repositories/Number_Trivia_repositories.dart';
 import 'package:NumberTrivia/FEATURES/Domain/UseCases/get_random_number_trivia.dart';
