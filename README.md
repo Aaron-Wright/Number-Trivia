@@ -1,2 +1,3 @@
 # Number-Trivia
-Getting somewhere!
+We'll continue tomorrow...
+M'ani kum!
