@@ -1,6 +1,6 @@
 import 'package:NumberTrivia/CORE/Errors/Exceptions.dart';
 import 'package:NumberTrivia/CORE/Errors/Failures.dart';
-import 'package:NumberTrivia/CORE/Platform/Network_Info.dart';
+import 'package:NumberTrivia/CORE/Network/Network_Info.dart';
 import 'package:NumberTrivia/FEATURES/Data/Data_Sources/number_trivia_local_data_source.dart';
 import 'package:NumberTrivia/FEATURES/Data/Data_Sources/number_trivia_remote_data_sources.dart';
 import 'package:NumberTrivia/FEATURES/Data/Models/number_trivia_model.dart';
