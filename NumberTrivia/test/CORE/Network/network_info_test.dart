@@ -1,3 +1,4 @@
+import 'package:NumberTrivia/CORE/Network/Network_Info.dart';
 import 'package:mockito/mockito.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:data_connection_checker/data_connection_checker.dart';
@@ -5,11 +6,29 @@ import 'package:data_connection_checker/data_connection_checker.dart';
 class MockDataConnectionChecker extends Mock implements DataConnectionChecker {}
 
 void main() {
-  NetworkInfoImpl networkInfoImpl;
+  NetworkInfoImpl networkInfo;
   MockDataConnectionChecker mockDataConnectionChecker;
 
   setUp(() {
     mockDataConnectionChecker = MockDataConnectionChecker();
-    networkInfoImpl = NetworkInfoImpl(mockDataConnectionChecker);
+    networkInfo = NetworkInfoImpl(mockDataConnectionChecker);
+  });
+
+  group('isConnected', () {
+    test(
+      'should forward the call to DataConnectionChecker.hasConnection',
+      () async {
+        // arrange
+        final thasConnectionFuture = Future.value(true);
+
+        when(mockDataConnectionChecker.hasConnection)
+            .thenAnswer((_) async => thasConnectionFuture);
+        // act
+        final result = networkInfo.isConnected;
+        // assert
+        verify(mockDataConnectionChecker.hasConnection);
+        expect(result, thasConnectionFuture);
+      },
+    );
   });
 }
