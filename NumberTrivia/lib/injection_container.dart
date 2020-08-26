@@ -15,6 +15,7 @@ import 'package:http/http.dart' as http;
 
 final sl = GetIt.instance;
 
+
 Future<void> init() async {
   //! Features = Number Trivia
   //bloc
@@ -33,7 +34,10 @@ Future<void> init() async {
   // Repository
   sl.registerLazySingleton<NumberTriviaRepository>(
     () => NumberTriviaRepositoryImpl(
-        localDataSource: sl(), networkInfo: sl(), remoteDataSource: sl()),
+        localDataSource: sl(), 
+        networkInfo: sl(), 
+        remoteDataSource: sl(),
+      ),
   );
 
   // Data Sources
